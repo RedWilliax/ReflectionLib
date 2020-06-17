@@ -14,9 +14,7 @@ namespace ReflectionLib
         /// <param name="_paramters">Array of parameters of your method</param>
         public static void Method(object _objectToAcces, string _methodeName, BindingFlags _flagsToSearch = BindingFlags.Default, object[] _paramters = null)
         {
-            if (_objectToAcces == null) throw new Exception("Object you want to access is null. Make sure there is no probleme");
-
-            Type _hisType = _objectToAcces.GetType();
+            Type _hisType = GetType(_objectToAcces);
 
             MethodInfo _methode = _hisType.GetMethod(_methodeName, _flagsToSearch);
 
@@ -34,15 +32,25 @@ namespace ReflectionLib
         /// <returns></returns>
         public static PropertyInfo Property(object _objectToAcces, string _propertiesName, BindingFlags _flagsToSearch = BindingFlags.Default)
         {
-            if (_objectToAcces == null) throw new Exception("Object you want to access is null. Make sure there is no probleme");
-
-            Type _hisType = _objectToAcces.GetType();
+            Type _hisType = GetType(_objectToAcces);
 
             PropertyInfo _property = _hisType.GetProperty(_propertiesName, _flagsToSearch);
 
             if (_property == null) throw new Exception("Property you want to access is not declared ! Maybe you have mistaken her name ?");
 
             return _property;
+        }
+
+        /// <summary>
+        /// Is used to get a type of an object
+        /// </summary>
+        /// <param name="_objectToAcces">Object you want to acces</param>
+        /// <returns></returns>
+        static Type GetType(object _objectToAcces)
+        {
+            if (_objectToAcces == null) throw new Exception("Object you want to access is null. Make sure there is no probleme");
+
+            return _objectToAcces.GetType();
         }
 
 
