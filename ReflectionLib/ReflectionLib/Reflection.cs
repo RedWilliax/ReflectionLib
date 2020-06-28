@@ -29,7 +29,7 @@ namespace ReflectionLib
         /// <param name="_propertyName">The name of property you want to use</param>
         /// <param name="_flagsToSearch">BindingFlags allow a more specific search</param>
         /// <returns></returns>
-        public static PropertyInfo PropertyInfo(object _objectToAccess, string _propertyName, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.NonPublic)
+        public static PropertyInfo PropertyInfo(object _objectToAccess, string _propertyName, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.Public)
         {
             Type _hisType = GetType(_objectToAccess);
 
@@ -91,7 +91,7 @@ namespace ReflectionLib
         /// <param name="_objectToAccess">Object you want to acces</param>
         /// <param name="_propertyName">The name of property you want to use</param>
         /// <param name="_flagsToSearch">BindingFlags allow a more specefic search</param>
-        public static T Property<T>(object _objectToAccess, string _propertyName, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.NonPublic)
+        public static T Property<T>(object _objectToAccess, string _propertyName, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.Public)
         {
             PropertyInfo _propertyInfo = PropertyInfo(_objectToAccess, _propertyName, _flagsToSearch);
 
@@ -126,7 +126,7 @@ namespace ReflectionLib
         /// <param name="_propertyName">The name of field you want to set</param>
         /// <param name="_valueToSet">the value used to set the field</param>
         /// <param name="_flagsToSearch">BindingFlags allow a more specefic search</param>
-        public static void SetProperty<T>(object _objectToAccess, string _propertyName, T _valueToSet, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.NonPublic)
+        public static void SetProperty<T>(object _objectToAccess, string _propertyName, T _valueToSet, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.Public)
         {
 
             PropertyInfo _propertyInfo = PropertyInfo(_objectToAccess, _propertyName, _flagsToSearch);
