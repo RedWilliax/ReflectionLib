@@ -72,7 +72,7 @@ namespace ReflectionLib
         }
 
         /// <summary>
-        /// Is used to get a Methode in object's instance, by reflection. 
+        /// Is used to get a Methode in object's instance, by reflection
         /// </summary>
         /// <param name="_objectToAccess">Object you want to acces</param>
         /// <param name="_methodeName">The name of method you want to use</param>
@@ -86,7 +86,7 @@ namespace ReflectionLib
         }
 
         /// <summary>
-        /// Is used to get a Property in object's instance, by reflection. 
+        /// Is used to get a Property in object's instance, by reflection
         /// </summary>
         /// <param name="_objectToAccess">Object you want to acces</param>
         /// <param name="_propertyName">The name of property you want to use</param>
@@ -119,7 +119,7 @@ namespace ReflectionLib
 
 
         /// <summary>
-        /// Is used to Set a field, by reflectionS
+        /// Is used to Set a field, by reflection
         /// </summary>
         /// <typeparam name="T">Type of field</typeparam>
         /// <param name="_objectToAccess">Object you want to access</param>
@@ -138,7 +138,7 @@ namespace ReflectionLib
         }
 
         /// <summary>
-        /// Is used to Set a field, by reflectionS
+        /// Is used to Set a field, by reflection
         /// </summary>
         /// <typeparam name="T">Type of field</typeparam>
         /// <param name="_objectToAccess">Object you want to access</param>
@@ -154,6 +154,7 @@ namespace ReflectionLib
             _fieldInfo.SetValue(_objectToAccess, _valueToSet);
 
         }
+
 
         static void EqualType(Type _type1, Type _type2)
         {
