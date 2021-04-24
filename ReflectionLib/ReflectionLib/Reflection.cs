@@ -72,7 +72,7 @@ namespace ReflectionLib
         }
 
         /// <summary>
-        /// Is used to get a Methode in object's instance, by reflection
+        /// Is used to get a Method in object's instance, by reflection
         /// </summary>
         /// <param name="_objectToAccess">Object you want to acces</param>
         /// <param name="_methodeName">The name of method you want to use</param>
@@ -119,12 +119,12 @@ namespace ReflectionLib
 
 
         /// <summary>
-        /// Is used to Set a field, by reflection
+        /// Is used to Set a property, by reflection
         /// </summary>
-        /// <typeparam name="T">Type of field</typeparam>
+        /// <typeparam name="T">Type of property</typeparam>
         /// <param name="_objectToAccess">Object you want to access</param>
-        /// <param name="_propertyName">The name of field you want to set</param>
-        /// <param name="_valueToSet">the value used to set the field</param>
+        /// <param name="_propertyName">The name of property you want to set</param>
+        /// <param name="_valueToSet">the value used to set the property</param>
         /// <param name="_flagsToSearch">BindingFlags allow a more specefic search</param>
         public static void SetProperty<T>(object _objectToAccess, string _propertyName, T _valueToSet, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.Public)
         {
@@ -154,7 +154,6 @@ namespace ReflectionLib
             _fieldInfo.SetValue(_objectToAccess, _valueToSet);
 
         }
-
 
         static void EqualType(Type _type1, Type _type2)
         {
