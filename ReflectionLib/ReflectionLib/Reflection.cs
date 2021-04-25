@@ -53,7 +53,7 @@ namespace ReflectionLib
 
             FieldInfo _field = _hisType.GetField(_fieldName, _flagsToSearch);
 
-            if (_field == null) throw new Exception("FieldInfo you want to access is not declared ! Maybe you have mistaken her name ?");
+            if (_field == null) throw new Exception("FieldInfo you want to access is not declared ! Maybe you have mistaken his name ?");
 
             return _field;
         }
