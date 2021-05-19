@@ -124,11 +124,10 @@ namespace ReflectionLib
         /// <typeparam name="T">Type of property</typeparam>
         /// <param name="_objectToAccess">Object you want to access</param>
         /// <param name="_propertyName">The name of property you want to set</param>
-        /// <param name="_valueToSet">the value used to set the property</param>
+        /// <param name="_valueToSet">The value used to set the property</param>
         /// <param name="_flagsToSearch">BindingFlags allow a more specefic search</param>
         public static void SetProperty<T>(object _objectToAccess, string _propertyName, T _valueToSet, BindingFlags _flagsToSearch = BindingFlags.Instance | BindingFlags.Public)
         {
-
             PropertyInfo _propertyInfo = PropertyInfo(_objectToAccess, _propertyName, _flagsToSearch);
 
             EqualType(_propertyInfo.PropertyType, typeof(T));
